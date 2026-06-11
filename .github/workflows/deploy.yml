@@ -26,6 +26,9 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Create dummy env file
+        run: echo "ANTHROPIC_API_KEY=dummy" > .env.local
+
       - name: Build
         run: npm run build
 
